@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+
+    background-color: bisque;
+    padding: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    background-color: deepskyblue;
+    padding-top: 10px;
+    margin: 20px;
+
+}
+
+/*Global styling*/
+a {
+    font-style: italic;
+    text-transform: uppercase;
+    color: rgba(255, 0, 0, 1);
+}
+
+a:hover {
+    color: blue
+}
+
+/*End Global styling*/
+
+section form label {
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+p {}
+
+.submit {
+    background-color: #E7FBBE;
+    font-size: 18px;
+    border: 2px solid black;
+    padding: 5px 15px;
+    border-radius: 15px;
+    display: block;
+}
+
+/**Psudo class**/
+
+.submit:hover {
+    background-color: #fbfabe;
+    color: red;
+}
+
+.labelP {
+    color: #FA26A0;
+}
+
+.boxes article {
+    background-color: #FA26A0;
+    color: white;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 5px 0;
+}
+
+.boxes article .section1 {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.boxes article .section2{
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}

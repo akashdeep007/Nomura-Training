@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    position: relative;
+
+}
+
+/*Start - Display flex assigned here...*/
+
+.d-flex {
+    display: flex;
+}
+
+/*End - Display flex assigned here...*/
+
+
+.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+
+.align-items-center {
+
+    align-items: center;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.bgcolor-brown {
+    background-color: #9C0F48;
+}
+
+header h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+section.bg-image {
+    width: 100%;
+    background-image: url('../assets/img/banner1.jpg');
+    background-size: cover;
+    background-color: brown;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.blocks {
+    width: 100%;
+    background: bisque;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    height: 83vh;
+}
+
+.blocks .block {
+
+    height: 200px;
+    position: relative;
+    width: 32%;
+
+    margin-bottom: 10px;
+
+    /*
+    float: left;
+    display: table;
+    width: 33%;
+    margin-left: 5px;
+    */
+}
+
+.blocks .block p {
+    text-align: center;
+    color: #fff;
+    padding: 15px;
+    /*
+    display: table-cell;
+    vertical-align: middle;
+ */
+}
+
+.blocks .block:first-child {
+    background: violet;
+}
+
+.blocks .block:nth-child(2) {
+    background: red;
+}
+
+.img-block-parent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 116px;
+    /*  display: flex; 
+    justify-content: center;*/
+}
+
+.img-block {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    background: #fff;
+    height: 116px;
+    margin: 0 auto;
+}
+
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);   
+    top: 0;
+    z-index: 1000;display: none;
+}
+
+.overlay .overlay-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+ 
+}
+
+.overlay .overlay-inner .overlay-box {
+    background-color: #fff;
+    border: 2px solid yellow;
+    width: 60%;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+
+}
+.overlay .overlay-inner .overlay-box  .overlay-content{
+    overflow: auto;
+    height: 190px;
+}
+.overlay .overlay-inner .overlay-box .closeBtn {
+    background-color: chocolate;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: -8px;
+    
+    top: -14px;
+
+}
+.floating-block{
+    position: fixed;
+    bottom:10px;
+    right: 10px;
+}
+.floating-block button{
+    background-color: chocolate;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.closeBtn:hover {
+    color: black;
+}
+/*---- Media Query------*/
+@media (min-width:1300px) {
+    body {}
+}
+
+@media (orientation: portrait) {
+    .blocks .block {}
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1024px) and (orientation: landscape) {
+    .blocks .block {}
+}
+
+@media (max-width:1200px) and (orientation: landscape) {
+    .blocks .block {}
+}
+
+@media (width:1180px) and (height:820px) and (orientation: landscape) {
+    .blocks .block {}
+}
+
+@media (max-width:768px) and (orientation: portrait) {
+
+    .blocks {
+
+        flex-direction: column;
+    }
+
+    .blocks .block {
+        width: 100%;
+    }
+}

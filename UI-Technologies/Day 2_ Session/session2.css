@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header h1{
+ text-align:center;
+ text-decoration:underline;
+}
+table{
+  
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+
+  
+  table tbody tr:nth-child(even){background-color: #f2f2f2;}
+  table tbody tr:hover {background-color: #ddd;}
+
+
+
+  ul,ol{
+      padding:25px
+  }
+
+  ul{
+      list-style: circle;
+  }
+ol{
+    list-style: decimal;
+}
+ 
+
+form label:first-child{
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+    font-size: 18px;
+    display: block;
+}
+form span{
+    margin-bottom: 20px;
+    display: block;
+}
+ 
+form input[type=checkbox],form input[type=radio]{
+    width: 20px;
+    height: 20px;
+}
+form input[type=submit]{
+    width: 150px;
+    height: 50px;
+}
+form span:nth-child(2) #label_1{
+    color: green;
+    font-weight: bold;
+}

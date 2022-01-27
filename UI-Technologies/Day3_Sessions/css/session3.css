@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    position: relative;
+
+}
+
+header h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+section.bg-image {
+    width: 100%;
+    background-image: url('../assets/img/banner1.jpg');
+    background-size: cover;
+    background-color: brown;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.blocks {
+    width: 100%;
+    background: bisque;
+}
+
+.blocks .block {
+    background: #9C0F48;
+    height: 200px;
+
+    float: left;
+    width: 33%;
+    margin-left: 5px;
+}
+.blocks .block:first-child{
+    background:  violet;
+}
+.blocks .block:nth-child(2){
+    background:  red;
+}
+.clear {
+    clear: both;
+}
+
+.blocks2 {
+    margin-top: 50px;
+    width: 100%;
+    background: bisque;
+    height: 50px;
+}
+
+/*---- Media Query------*/
+@media (min-width:1300px) {
+   body{
+  
+   }
+}
+
+@media (orientation: portrait) {
+    .blocks .block{
+
+        width: 100%; margin-left: 0;
+        border: 1px solid greenyellow;
+        margin-bottom: 10px;
+    }
+ 
+}
+
+
+ 
+ 
+
+
+
+
+
+
+@media (max-width:1024px) and (orientation: landscape) {
+    .blocks .block{
+
+    
+        width: 32%;
+        margin-left: 5px;border: 1px solid greenyellow;
+        
+    }
+}
+@media (max-width:1200px) and (orientation: landscape) {
+    .blocks .block{
+
+        background: #9C0F48;
+        width: 32%;
+        margin-left: 5px;border: 1px solid greenyellow;
+        
+    }
+}
+@media (width:1180px) and (height:820px) and (orientation: landscape) {
+    .blocks .block{
+
+        background: blue;
+        width: 32%;
+        margin-left: 10px;border: 1px solid #fff;
+        
+    }
+}
+
+@media (max-width:768px) and (orientation: portrait) {
+
+    .blocks .block{
+
+        float: none;
+        width: 100%;
+        margin-left: 0;border: 1px solid greenyellow;
+        margin-bottom: 10px;
+    }
+}
+
+

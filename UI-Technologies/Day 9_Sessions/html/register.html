@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Form validation</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/session9.css">
+<script src="../js/validation.js"></script>
+</head>
+<body>
+    <section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-8 col-xl-8">
+                <div class="card" style="border-radius: 15px;">
+                  <div class="card-body p-5">
+                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+      
+                    <form name="contactForm" onsubmit="return validateForm()" action="" method="post">
+                        <h2>Application Form</h2>
+                        <div class="row">
+                            <label>Full Name</label>
+                            <input type="text" name="name">
+                            <div class="error" id="nameErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Email Address</label>
+                            <input type="text" name="email">
+                            <div class="error" id="emailErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Mobile Number</label>
+                            <input type="text" name="mobile" maxlength="10">
+                            <div class="error" id="mobileErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Country</label>
+                            <select name="country">
+                                <option>Select</option>
+                                <option>Australia</option>
+                                <option>India</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                            </select>
+                            <div class="error" id="countryErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Gender</label>
+                            <div class="form-block w-100">
+                                <label><input type="radio" name="gender" value="male"> Male</label>
+                                <label><input type="radio" name="gender" value="female"> Female</label>
+                            </div>
+                            <div class="error" id="genderErr"></div>
+                        </div>
+                        <div class="row">
+                            <label>Hobbies <i>(Optional)</i></label>
+                            <div class="form-block  w-100">
+                                <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                                <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                                <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+
+</body>
+</html>

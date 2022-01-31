@@ -1,0 +1,20 @@
+{
+    "cards": [
+        {
+            "headerText": "Video Marketing",
+            "dataList":[
+                {
+                    "img":"path"
+                },
+                {
+                    "img":"path2"
+                }
+            ]
+        },
+        {
+            "headerText": "Email Marketing"
+        }
+    ]
+}
+
+ 

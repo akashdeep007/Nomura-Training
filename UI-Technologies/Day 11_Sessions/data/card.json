@@ -1,0 +1,19 @@
+{
+    "cards": [
+        {
+            "headerText": "Video Marketing", "bodyText": "Reach a huge area of users and get a publicty of your product and service ,<span>video marketing</span> solution.",
+            "imgPath":"assets/img/icon/007-digital-marketing-3.png"
+            
+        },
+        {
+            "headerText": "Email Marketing", "bodyText": "Email Marketing is a great solution to reach a <span>high range of customers</span> eagrerly waiting to get a service.",
+            "imgPath":"assets/img/icon/008-digital-marketing-2.png"
+        },
+        {
+            "headerText": "SEO optimization", "bodyText": "we provide wide range of<span> seo service</span> to make your site at top to reach your target customers provided.",
+            "imgPath":"assets/img/icon/003-task.png"
+        }
+    ]
+}
+
+ 

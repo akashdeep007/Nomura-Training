@@ -1,0 +1,16 @@
+{
+    "navs": [
+        {
+            "navList": "Home",  "anchorLink":""
+            
+        },
+        {
+            "navList": "Register",  "anchorLink":""
+        },
+        {
+            "navList": "Logout",  "anchorLink":""
+        }
+    ]
+}
+
+ 

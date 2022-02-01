@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+
+    <div class="container mt-4">
+
+        <div class="row container align-items-center justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <header class="card-header">
+                        <h4 id="welcome" class="card-title mt-4 text-center d-inline"></h4>
+                        <a id="logout" onclick="logout()" href="../index.html"
+                            class="float-right btn btn-outline-primary mt-1">Logout</a>
+                        <!-- <button id="redirect" class="d-none" href="../index.html"
+                            class="float-right btn btn-outline-primary mt-1">Logout</button> -->
+                    </header>
+                    <article class="card-body">
+                        <form onsubmit="return validateForm()">
+                            <div class="form-row">
+                                <div class="col form-group">
+                                    <label>First name </label>
+                                    <input type="text" id="firstname" class="form-control" placeholder="" readonly>
+
+                                </div> <!-- form-group end.// -->
+                                <div class="col form-group">
+                                    <label>Last name</label>
+                                    <input type="text" id="lastname" class="form-control" placeholder=" " readonly>
+                                </div> <!-- form-group end.// -->
+                            </div> <!-- form-row end.// -->
+                            <div class="form-group">
+                                <label>Email address</label>
+                                <input type="email" id="email" class="form-control" placeholder="" readonly>
+                                <div class="error" id="emailErr"></div>
+                                <small class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div> <!-- form-group end.// -->
+                            <div class="form-group">
+                                <label class="mr-2">Gender : </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="o1" value="option1"
+                                        disabled>
+                                    <span class="form-check-label"> Male </span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="o2" value="option2"
+                                        disabled>
+                                    <span class="form-check-label"> Female</span>
+                                </label>
+                                <div class="error" id="genderErr"></div>
+                            </div> <!-- form-group end.// -->
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>City</label>
+                                    <input type="text" id="city" class="form-control" readonly>
+                                    <div class="error" id="cityErr"></div>
+                                </div> <!-- form-group end.// -->
+                                <div class="form-group col-md-6">
+                                    <label>Country</label>
+                                    <select id="country" class="form-control" disabled="true">
+                                        <option> Choose...</option>
+                                        <option>Uzbekistan</option>
+                                        <option>Russia</option>
+                                        <option>United States</option>
+                                        <option selected="">India</option>
+                                        <option>Afganistan</option>
+                                    </select>
+                                    <div class="error" id="countryErr"></div>
+                                </div> <!-- form-group end.// -->
+                            </div> <!-- form-row.// -->
+                            <!-- form-group// -->
+                        </form>
+                    </article> <!-- card-body end .// -->
+                </div>
+            </div> <!-- card.// -->
+        </div> <!-- col.//-->
+
+    </div> <!-- row.//-->
+
+
+    </div>
+    <!--container end.//-->
+
+</body>
+
+</html>

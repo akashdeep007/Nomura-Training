@@ -1,0 +1,21 @@
+.error {
+  color: #e74c3c;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.errorcolor input,
+.errorcolor select,
+.errorcolor .form-block {
+  font-size: 90%;
+  border-color: #e74c3c;
+  border-width: 1.5px;
+}
+
+.successcolor input,
+.successcolor select,
+.successcolor .form-block {
+  font-size: 90%;
+  border-color: #2ecc71;
+  border-width: 1.5px;
+}

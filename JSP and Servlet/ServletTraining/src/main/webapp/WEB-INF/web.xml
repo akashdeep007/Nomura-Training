@@ -11,11 +11,37 @@
   </welcome-file-list>
   
   <servlet>
-  <servlet-name>firstServlet</servlet-name>
-  <servlet-class>com.nrifintech.servlet.MyFirstServlet</servlet-class>
+  	<servlet-name>firstServlet</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.MyFirstServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>firstServletInitParam</param-name>
+  		<param-value>SampleFirstServletInitParamValue</param-value>
+  	</init-param>
   </servlet>
+  
   <servlet-mapping>
-  <servlet-name>firstServlet</servlet-name>
-  <url-pattern>/first-servlet</url-pattern>
+  	<servlet-name>firstServlet</servlet-name>
+  	<url-pattern>/first-servlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>objectScopeServlet</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.ServletObjectsAndScopes</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>objectScopeServlet</servlet-name>
+  	<url-pattern>/object-scope-servlet</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>sampleInitParamFromWebXML</param-name>
+  	<param-value>SomeValueFromWeb.xml</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>sampleInitParamFromWebXML2</param-name>
+  	<param-value>SomeValueFromWeb.xml2</param-value>
+  </context-param>
 </web-app>

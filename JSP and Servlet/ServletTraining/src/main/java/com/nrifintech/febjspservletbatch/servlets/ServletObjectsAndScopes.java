@@ -1,6 +1,7 @@
 package com.nrifintech.febjspservletbatch.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
@@ -37,6 +38,12 @@ public class ServletObjectsAndScopes extends HttpServlet {
 		
 		System.out.println("inputName - "+inputName);
 		System.out.println("inputTitle - "+inputTitle);
+		
+		try(PrintWriter writer = resp.getWriter();) {
+			writer.println("<h1>Personal Information</h1><br/>");
+			writer.println("<p><b>Name</b> - "+inputName+"</p>");
+			writer.println("<p><b>Title</b> - "+inputTitle+"</p>");
+		}
 	}
 	
 }

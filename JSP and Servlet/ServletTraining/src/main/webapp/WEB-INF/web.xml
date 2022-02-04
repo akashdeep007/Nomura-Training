@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>ServletTraining</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JSPServletTrainingProject</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
     <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
   <servlet>
@@ -44,4 +44,44 @@
   	<param-name>sampleInitParamFromWebXML2</param-name>
   	<param-value>SomeValueFromWeb.xml2</param-value>
   </context-param>
+  
+  <servlet>
+  	<servlet-name>serve-forwarded-request</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.TakeForwardedRequestServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>serve-forwarded-request</servlet-name>
+  	<url-pattern>/serve-forwarded-request</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>serve-client-request</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.ForwardMeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>serve-client-request</servlet-name>
+  	<url-pattern>/serve-client-request</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>redirectHereServlet</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.RedirectHereServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>redirectHereServlet</servlet-name>
+  	<url-pattern>/redirect-here-servlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>redirectServlet</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.RedirectServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>redirectServlet</servlet-name>
+  	<url-pattern>/redirect-servlet</url-pattern>
+  </servlet-mapping>
 </web-app>

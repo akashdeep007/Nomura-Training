@@ -15,10 +15,14 @@ var loadTable = () => {
         id.innerHTML = user.id;
         tablerow.setAttribute("id", user.id);
         tablerow.append(id);
-        var name = document.createElement("td");
+        var image_name_td = document.createElement("td");
+        var image = document.createElement("img");
+        image.src = user.avatar;
+        image.classList.add("img-fluid", "avatar");
+        image_name_td.append(image);
         var fullname = user.first_name + " " + user.last_name;
-        name.innerHTML = fullname;
-        tablerow.append(name);
+        image_name_td.append(fullname);
+        tablerow.append(image_name_td);
         var email = document.createElement("td");
         email.innerHTML = user.email;
         tablerow.append(email);
@@ -34,12 +38,15 @@ var loadTable = () => {
         buttons.innerHTML = '<a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE5C9;</i></a>'
         if (user.email != loggedInUser) {
             buttons.onclick = function () {
-
-                document.getElementById(user.id).remove();
+                deleteRow(user.id)
             }
         }
         tablerow.append(buttons);
         tableBody.append(tablerow);
     });
 };
+
+var deleteRow = (id) => {
+    document.getElementById(id).remove();
+}
 

@@ -9,6 +9,10 @@ body {
   font-family: 'Varela Round', sans-serif;
   font-size: 13px;
 }
+img{
+  height: 50px;
+  width: 50px;
+}
 
 .container-fluid {
   padding-left: 0;

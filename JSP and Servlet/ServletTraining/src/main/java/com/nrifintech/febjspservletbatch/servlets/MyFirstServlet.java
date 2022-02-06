@@ -36,6 +36,9 @@ public class MyFirstServlet extends HttpServlet {
 		// set in request attribute
 		req.setAttribute("sampleReqAttr", "sampleRequestVal");
 		System.out.println("sampleReqAttr - "+req.getAttribute("sampleReqAttr"));
+		
+		// getting request attribute from jsp
+		resp.getWriter().println(req.getAttribute("requestAttrSetFromPage-helloWorld"));
 	}
 	
 	@Override

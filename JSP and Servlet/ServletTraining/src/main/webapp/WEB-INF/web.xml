@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>JSPServletTrainingProject</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -46,6 +46,21 @@
   	<param-value>SomeValueFromWeb.xml2</param-value>
   </context-param>
   
+  <context-param>
+  	<param-name>JDBC_URL</param-name>
+  	<param-value>jdbc:postgresql://localhost/postgres</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>DB_USERNAME</param-name>
+  	<param-value>postgres</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>DB_PASSWORD</param-name>
+  	<param-value>postgres</param-value>
+  </context-param>
+  
   <servlet>
   	<servlet-name>serve-forwarded-request</servlet-name>
   	<servlet-class>com.nrifintech.febjspservletbatch.servlets.TakeForwardedRequestServlet</servlet-class>
@@ -85,4 +100,51 @@
   	<servlet-name>redirectServlet</servlet-name>
   	<url-pattern>/redirect-servlet</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>jdbcConnectionServlet</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.JDBCConnectionTest</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>jdbcConnectionServlet</servlet-name>
+  	<url-pattern>/jdbc-connection-servlet</url-pattern>
+  </servlet-mapping>
+  
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/error-404.jsp</location>
+  </error-page>
+  
+  <!-- <error-page>
+  	<error-code>500</error-code>
+  	<location>/error-500.jsp</location>
+  </error-page> -->
+  
+  <error-page>
+  	<exception-type>java.io.IOException</exception-type>
+  	<location>/io-exception.jsp</location>
+  </error-page>
+  
+  <filter>
+  	<filter-name>loggingFilter</filter-name>
+  	<filter-class>com.nrifintech.febjspservletbatch.filter.LoggingFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>loggingFilter</filter-name>
+  	<url-pattern>/filtered-jsp.jsp</url-pattern>
+  	<!-- <url-pattern>/redirect-here-servlet</url-pattern> -->
+  </filter-mapping>
+  
+  <filter>
+  	<filter-name>orderTestFilter</filter-name>
+  	<filter-class>com.nrifintech.febjspservletbatch.filter.FilterToTestOrder</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>orderTestFilter</filter-name>
+  	<url-pattern>/filtered-jsp.jsp</url-pattern>
+  	<!-- <url-pattern>/redirect-here-servlet</url-pattern> -->
+  </filter-mapping>
 </web-app>

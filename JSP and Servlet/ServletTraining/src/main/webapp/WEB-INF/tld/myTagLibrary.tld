@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+  
+  <display-name>My Own Tag Library</display-name>
+  <tlib-version>1.0</tlib-version>
+  <short-name>mt</short-name>
+  <uri>/WEB-INF/tld/myTagLibrary.tld</uri>
+  
+  
+  <function>
+  	<name>getSum</name>
+  	<description>returns sum of two numbers</description>
+  	<function-class>com.nrifintech.febjspservletbatch.util.MyELFunction</function-class>
+  	<function-signature>
+  		int getSum(int, int)
+  	</function-signature>
+  	<example>
+  		${fn:getSum(2,3)}
+  	</example>
+  </function>
+</taglib>

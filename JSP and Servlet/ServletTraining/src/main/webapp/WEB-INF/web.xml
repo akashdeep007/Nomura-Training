@@ -183,4 +183,11 @@
   <listener>
   	<listener-class>com.nrifintech.febjspservletbatch.listeners.HttpSessionEventHandler</listener-class>
   </listener>
+  
+  <jsp-config>
+  	<taglib>
+  		<taglib-uri>/WEB-INF/tld/myTagLibrary</taglib-uri>
+  		<taglib-location>/WEB-INF/tld/myTagLibrary.tld</taglib-location>
+  	</taglib>
+  </jsp-config>
 </web-app>

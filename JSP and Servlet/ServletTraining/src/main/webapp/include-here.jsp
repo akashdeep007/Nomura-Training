@@ -4,15 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Create a Cookie here</title>
+<title>Include another JSP</title>
 </head>
 <body>
-	<%
-		Cookie cookie = new Cookie("username", "anjali");
-		
-		response.addCookie(cookie);
-		
-		out.print("cookie created successfully");
-	%>
+<%-- <jsp:include page="contentToInclude.jsp"/> --%>
+<%@ include file="contentToInclude.jsp" %>
+<br/>
+<h3>This is not included content</h3>
 </body>
 </html>

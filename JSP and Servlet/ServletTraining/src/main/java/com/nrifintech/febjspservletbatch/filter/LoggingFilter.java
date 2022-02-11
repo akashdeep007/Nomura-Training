@@ -14,6 +14,9 @@ public class LoggingFilter implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		System.out.println("Initializing LoggingFilter...");
+	
+		String someFilterInitParamVal = filterConfig.getInitParameter("someFilterInitParam");
+		System.out.println("someFilterInitParamVal - "+someFilterInitParamVal);
 	}
 
 	@Override

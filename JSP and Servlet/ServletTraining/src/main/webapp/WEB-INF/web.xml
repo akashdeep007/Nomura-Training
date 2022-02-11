@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://JAVA.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>JSPServletTrainingProject</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -129,12 +129,18 @@
   <filter>
   	<filter-name>loggingFilter</filter-name>
   	<filter-class>com.nrifintech.febjspservletbatch.filter.LoggingFilter</filter-class>
+  	
+  	<init-param>
+  		<param-name>someFilterInitParam</param-name>
+  		<param-value>someFilterInitValue</param-value>
+  	</init-param>
   </filter>
   
   <filter-mapping>
   	<filter-name>loggingFilter</filter-name>
-  	<url-pattern>/filtered-jsp.jsp</url-pattern>
+  	<url-pattern>/filtered-dir/*</url-pattern>
   	<!-- <url-pattern>/redirect-here-servlet</url-pattern> -->
+  <!-- 	<url-pattern>*.jsp</url-pattern> -->
   </filter-mapping>
   
   <filter>
@@ -147,4 +153,24 @@
   	<url-pattern>/filtered-jsp.jsp</url-pattern>
   	<!-- <url-pattern>/redirect-here-servlet</url-pattern> -->
   </filter-mapping>
+  
+  <servlet>
+  	<servlet-name>loginServlet</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.LoginServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>loginServlet</servlet-name>
+  	<url-pattern>/doLogin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>logoutServlet</servlet-name>
+  	<servlet-class>com.nrifintech.febjspservletbatch.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>logoutServlet</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
 </web-app>

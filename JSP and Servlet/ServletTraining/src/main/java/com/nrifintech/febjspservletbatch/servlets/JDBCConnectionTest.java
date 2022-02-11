@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.nrifintech.febjspservletbatch.util.ApplicationUtil;
 import com.nrifintech.febjspservletbatch.util.DBConnectionManager;
 
 public class JDBCConnectionTest extends HttpServlet {
@@ -24,7 +25,8 @@ public class JDBCConnectionTest extends HttpServlet {
 	@Override
 	public void init() throws ServletException {
 		// Creating DBConnectionManager object to get the connection
-		dbConnectionManager = new DBConnectionManager();
+//		dbConnectionManager = new DBConnectionManager();
+		dbConnectionManager = ApplicationUtil.getConnectionManager();
 	}
 
 	@Override

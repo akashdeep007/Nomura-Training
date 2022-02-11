@@ -173,4 +173,14 @@
   	<servlet-name>logoutServlet</servlet-name>
   	<url-pattern>/logout</url-pattern>
   </servlet-mapping>
+  
+  <listener>
+  	<listener-class>com.nrifintech.febjspservletbatch.listeners.ServletContextEventHandler</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.nrifintech.febjspservletbatch.listeners.ServletContextAttributeEventHandler</listener-class>
+  </listener>
+  <listener>
+  	<listener-class>com.nrifintech.febjspservletbatch.listeners.HttpSessionEventHandler</listener-class>
+  </listener>
 </web-app>

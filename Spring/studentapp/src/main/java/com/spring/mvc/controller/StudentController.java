@@ -2,6 +2,7 @@ package com.spring.mvc.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.spring.mvc.bean.CountryBean;
 import com.spring.mvc.bean.SkillBean;
 import com.spring.mvc.bean.Student;
+import com.spring.mvc.bean.Students;
 
 @Controller
 public class StudentController {
@@ -21,6 +23,8 @@ public class StudentController {
 	CountryBean countryBean;
 	@Autowired
 	SkillBean skillBean;
+	@Autowired
+	Students students;
 	
 	@ModelAttribute
 	public Student student() {
@@ -57,14 +61,18 @@ public class StudentController {
 		
 		System.out.println(student);
 		
-		ModelAndView modelAndView = new ModelAndView("showStudent");
-		
-		modelAndView.addObject("student", student);
+		ModelAndView modelAndView = new ModelAndView("allStudents");
+		students.addValue(student);
+		System.out.print(students.getStudentMap());
+		modelAndView.addObject("allStudents", students.getStudentMap());
 		return modelAndView;
 	}
 	@RequestMapping("/allStudents")
 	public ModelAndView  allSttudents() {
-		ModelAndView mView = new ModelAndView("");
+		Map<Integer, Student> studentsMap= students.getStudentMap();
+		System.out.println(studentsMap);
+		ModelAndView mView = new ModelAndView("allStudents");
+		mView.addObject("allStudents", studentsMap);
 		return mView;
 	}
 }
